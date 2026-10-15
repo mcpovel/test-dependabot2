@@ -73,7 +73,7 @@ kafka_exporter_chart:
 sshd:
   image:
     repository: ghcr.io/dbildungsplattform/infra-sshd
-    tag: 9.6p2-20260901
+    tag: 9.6p2-20261001
 
 kyverno_chart:
   image:
