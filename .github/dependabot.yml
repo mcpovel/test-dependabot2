@@ -24,16 +24,6 @@ updates:
         - "minor"
         - "patch"
 
-  - package-ecosystem: "docker"
-    directory: "ansible/group_vars/all"
-    schedule:
-      interval: "daily"
-    groups:
-      non-major-updates:
-        update-types:
-        - "minor"
-        - "patch"
-
 
   - package-ecosystem: "helm"
     directory: "ansible/group_vars/all"
