@@ -18,7 +18,7 @@ vmagent_chart:
 kube_prometheus_stack_chart:
   image:
     repository: ghcr.io/prometheus-community/charts/kube-prometheus-stack
-    tag: 91.5.2
+    tag: 92.8.0
 
 onepassword_connect_chart:
   image:
