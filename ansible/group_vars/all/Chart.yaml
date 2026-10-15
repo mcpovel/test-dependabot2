@@ -1,0 +1,40 @@
+---
+# helper file to match dependabot's conventions to detect dependencies in Helm repos
+# dependencies here are not stored in oci repos yet, so we have to list them here
+dependencies:
+  - name: cert-manager-clusterissuer
+    version: 1.2.0
+    repository: https://dbildungsplattform.github.io/helm-charts-registry/
+  - name: infra-sshd
+    version: 1.2.0
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: 389ds
+    version: 0.3.0
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: cronjob
+    version: 1.2.0
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: infra-otc-cert-manager-webhook
+    version: 1.0.3
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: metrics-server
+    version: 3.14.0
+    repository: "https://kubernetes-sigs.github.io/metrics-server"
+  - name: uptime-kuma
+    version: 4.2.0
+    repository: "https://dirsigler.github.io/uptime-kuma-helm"
+  - name: valkey
+    version: 3.0.1
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: net-cmds
+    version: 1.0.1
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: grafana-crs
+    version: 0.1.1
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: ionos-exporter
+    version: 0.6.0
+    repository: "https://dbildungsplattform.github.io/helm-charts-registry"
+  - name: traefik
+    version: 41.6.0
+    repository: "https://helm.traefik.io/traefik"

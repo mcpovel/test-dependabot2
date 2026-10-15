@@ -1,0 +1,122 @@
+---
+# helper file to match dependabot's conventions to detect dependencies in OCI repos
+fluentbit_chart:
+  image:
+    repository: ghcr.io/fluent/helm-charts/fluent-bit
+    tag: 0.58.2
+
+victoriametrics_chart:
+  image:
+    repository: ghcr.io/victoriametrics/helm-charts/victoria-metrics-cluster
+    tag: 0.51.0
+
+vmagent_chart:
+  image:
+    repository: ghcr.io/victoriametrics/helm-charts/victoria-metrics-agent
+    tag: 0.48.0
+
+kube_prometheus_stack_chart:
+  image:
+    repository: ghcr.io/prometheus-community/charts/kube-prometheus-stack
+    tag: 91.5.2
+
+onepassword_connect_chart:
+  image:
+    repository: ghcr.io/1password/connect
+    tag: 2.4.1
+
+loki_chart:
+  image:
+    repository: ghcr.io/grafana/helm-charts/loki
+    tag: 7.3.0
+
+ldap_uem:
+  image:
+    repository: registry.suse.com/suse/389-ds
+    tag: 3.0.6-18.10
+
+grafana_operator_chart:
+  image:
+    repository: ghcr.io/grafana/helm-charts/grafana-operator
+    tag: 5.25.0
+
+cert_manager_chart:
+  image:
+    repository: quay.io/jetstack/charts/cert-manager
+    tag: v1.21.2
+
+dbcmetrics:
+  image:
+    repository: ghcr.io/dbildungsplattform/dbcmetrics
+    tag: 1.10.2
+
+grafana:
+  image:
+    repository: docker.io/grafana/grafana
+    tag: 13.2.2
+
+blackbox_exporter_chart:
+  image:
+    repository: ghcr.io/prometheus-community/charts/prometheus-blackbox-exporter
+    tag: 11.18.0
+
+onepassword_operator:
+  image:
+    repository: registry-1.docker.io/1password/onepassword-operator
+    tag: 1.12.0
+
+kafka_exporter_chart:
+  image:
+    repository: ghcr.io/prometheus-community/charts/prometheus-kafka-exporter
+    tag: 4.0.0
+
+sshd:
+  image:
+    repository: ghcr.io/dbildungsplattform/infra-sshd
+    tag: 9.6p2-20260901
+
+kyverno_chart:
+  image:
+    repository: ghcr.io/kyverno/charts/kyverno
+    # 3.9.0 seems to behave differently (i.e., applying mutating policy to all namespaces, see https://github.com/kyverno/kyverno/issues/17411), so sticking with 3.8.2
+    tag: 3.8.2
+
+uptime_kuma:
+  image:
+    repository: dhi.io/uptime-kuma
+    tag: 2.5.5
+
+valkey:
+  image:
+    repository: "valkey/valkey"
+    tag: 9.1.2
+
+infra_tools:
+  image:
+    repository: "ghcr.io/dbildungsplattform/infra-tools"
+    tag: 4.4.0
+
+cron_tools:
+  image:
+    repository: "ghcr.io/dbildungsplattform/cron-tools"
+    tag: scheduled-1.0.261001
+
+kafka:
+  image:
+    repository: "docker.io/apache/kafka"
+    tag: 4.3.1
+
+ionos_exporter:
+  image:
+    repository: "ghcr.io/dbildungsplattform/ionos-exporter"
+    tag: 0.6.0
+
+trivy_operator_chart:
+  image:
+    repository: ghcr.io/aquasecurity/helm-charts/trivy-operator
+    tag: 0.32.1
+
+telegraf:
+  image:
+    repository: "docker.io/telegraf"
+    tag: 1.37.1
