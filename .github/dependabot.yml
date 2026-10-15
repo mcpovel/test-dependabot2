@@ -1,0 +1,60 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+
+registries:
+  docker-hardened:
+    type: "docker-registry"
+    url: "dhi.io"
+    replaces-base: true
+    username: ${{ secrets.DOCKER_USERNAME }}
+    password: ${{ secrets.DOCKER_TOKEN }}
+
+updates:
+  - package-ecosystem: "docker"
+    directory: "ansible/group_vars/all"
+    schedule:
+      interval: "weekly"
+    groups:
+      non-major-updates:
+        update-types:
+        - "minor"
+        - "patch"
+
+  - package-ecosystem: "docker"
+    directory: "ansible/group_vars/all"
+    schedule:
+      interval: "weekly"
+    groups:
+      non-major-updates:
+        update-types:
+        - "minor"
+        - "patch"
+
+
+  - package-ecosystem: "helm"
+    directory: "ansible/group_vars/all"
+    schedule:
+      interval: "weekly"
+    groups:
+      non-major-updates:
+        update-types:
+        - "minor"
+        - "patch"
+    # due to https://github.com/dependabot/dependabot-core/issues/12207, helm ecosystem cannot be used to also update values.yml
+    exclude-paths:
+      - "**/values.yml"
+      - "**/values.yaml"
+
+  - package-ecosystem: "pip"
+    directory: "ansible/group_vars/privacyidea"
+    schedule:
+      interval: "weekly"
+    groups:
+      non-major-updates:
+        update-types:
+        - "minor"
+        - "patch"

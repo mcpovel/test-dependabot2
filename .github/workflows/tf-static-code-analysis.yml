@@ -1,0 +1,46 @@
+name: TF Static Code Analysis
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/**'
+      - '.github/templates/**'
+      - 'terraform/resource-pools/**'
+  workflow_dispatch:
+jobs:
+  code-analysis:
+    name: Run Code Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  #v6.0.3
+        with:
+          path: checkout
+
+      - name: Clone tf modules repo
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  #v6.0.3
+        with:
+          repository: dbildungsplattform/infra-terraform-modules
+          path: terraform-modules
+
+      - name: Run Trivy vulnerability scanner in IaC mode
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 #v0.36.0
+        with:
+          scan-type: 'config'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
+          scan-ref: ./checkout/terraform
+          list-all-pkgs: true
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        if: always()
+        uses: github/codeql-action/upload-sarif@5595ccaf912efad79be6eef63a5619ff05969be3 #v4.37.6
+        with:
+          sarif_file: 'trivy-results.sarif'
