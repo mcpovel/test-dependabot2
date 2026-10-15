@@ -17,7 +17,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "ansible/group_vars/all"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     groups:
       non-major-updates:
         update-types:
@@ -27,7 +27,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "ansible/group_vars/all"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     groups:
       non-major-updates:
         update-types:
