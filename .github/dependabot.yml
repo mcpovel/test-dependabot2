@@ -16,6 +16,8 @@ registries:
 updates:
   - package-ecosystem: "docker"
     directory: "ansible/group_vars/all"
+    registries:
+      - "docker-hardened"
     schedule:
       interval: "daily"
     groups:
