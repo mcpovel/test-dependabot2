@@ -3,17 +3,17 @@
 fluentbit_chart:
   image:
     repository: ghcr.io/fluent/helm-charts/fluent-bit
-    tag: 0.58.2
+    tag: 0.58.3
 
 victoriametrics_chart:
   image:
     repository: ghcr.io/victoriametrics/helm-charts/victoria-metrics-cluster
-    tag: 0.51.0
+    tag: 0.53.0
 
 vmagent_chart:
   image:
     repository: ghcr.io/victoriametrics/helm-charts/victoria-metrics-agent
-    tag: 0.48.0
+    tag: 0.50.0
 
 kube_prometheus_stack_chart:
   image:
@@ -23,7 +23,7 @@ kube_prometheus_stack_chart:
 onepassword_connect_chart:
   image:
     repository: ghcr.io/1password/connect
-    tag: 2.4.1
+    tag: 2.4.2
 
 loki_chart:
   image:
@@ -58,7 +58,7 @@ grafana:
 blackbox_exporter_chart:
   image:
     repository: ghcr.io/prometheus-community/charts/prometheus-blackbox-exporter
-    tag: 11.18.0
+    tag: 11.20.0
 
 onepassword_operator:
   image:
@@ -79,12 +79,12 @@ kyverno_chart:
   image:
     repository: ghcr.io/kyverno/charts/kyverno
     # 3.9.0 seems to behave differently (i.e., applying mutating policy to all namespaces, see https://github.com/kyverno/kyverno/issues/17411), so sticking with 3.8.2
-    tag: 3.8.2
+    tag: 3.9.1
 
 uptime_kuma:
   image:
     repository: dhi.io/uptime-kuma
-    tag: 2.5.5
+    tag: 2.5.6
 
 valkey:
   image:
@@ -119,4 +119,4 @@ trivy_operator_chart:
 telegraf:
   image:
     repository: "docker.io/telegraf"
-    tag: 1.37.1
+    tag: 1.40.2
