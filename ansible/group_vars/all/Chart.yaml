@@ -36,5 +36,5 @@ dependencies:
     version: 0.6.0
     repository: "https://dbildungsplattform.github.io/helm-charts-registry"
   - name: traefik
-    version: 41.6.0
+    version: 42.0.0
     repository: "https://helm.traefik.io/traefik"
