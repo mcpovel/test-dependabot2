@@ -12,12 +12,19 @@ registries:
     replaces-base: true
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_TOKEN }}
-
+    
+  docker-io:
+    type: "docker-registry"
+    url: "docker.io"
+    replaces-base: true
+    username: ${{ secrets.DOCKER_USERNAME }}
+    password: ${{ secrets.DOCKER_TOKEN }}
 updates:
   - package-ecosystem: "docker"
     directory: "ansible/group_vars/all"
     registries:
       - "docker-hardened"
+      - "docker-io"
     schedule:
       interval: "daily"
     groups:
