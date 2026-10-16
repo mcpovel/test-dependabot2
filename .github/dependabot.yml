@@ -9,14 +9,12 @@ registries:
   docker-hardened:
     type: "docker-registry"
     url: "dhi.io"
-    replaces-base: true
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_TOKEN }}
     
   docker-io:
     type: "docker-registry"
     url: "docker.io"
-    replaces-base: true
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_TOKEN }}
 updates:
