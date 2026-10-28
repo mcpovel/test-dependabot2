@@ -3,17 +3,17 @@
 fluentbit_chart:
   image:
     repository: ghcr.io/fluent/helm-charts/fluent-bit
-    tag: 0.58.2
+    tag: 0.58.3
 
 victoriametrics_chart:
   image:
     repository: ghcr.io/victoriametrics/helm-charts/victoria-metrics-cluster
-    tag: 0.51.0
+    tag: 0.54.0
 
 vmagent_chart:
   image:
     repository: ghcr.io/victoriametrics/helm-charts/victoria-metrics-agent
-    tag: 0.48.0
+    tag: 0.51.0
 
 kube_prometheus_stack_chart:
   image:
@@ -23,12 +23,12 @@ kube_prometheus_stack_chart:
 onepassword_connect_chart:
   image:
     repository: ghcr.io/1password/connect
-    tag: 2.4.1
+    tag: 2.4.3
 
 loki_chart:
   image:
     repository: ghcr.io/grafana/helm-charts/loki
-    tag: 7.3.0
+    tag: 7.5.0
 
 ldap_uem:
   image:
@@ -43,7 +43,7 @@ grafana_operator_chart:
 cert_manager_chart:
   image:
     repository: quay.io/jetstack/charts/cert-manager
-    tag: v1.21.2
+    tag: v1.21.3
 
 dbcmetrics:
   image:
@@ -53,22 +53,22 @@ dbcmetrics:
 grafana:
   image:
     repository: docker.io/grafana/grafana
-    tag: 13.2.2
+    tag: 13.2.4
 
 blackbox_exporter_chart:
   image:
     repository: ghcr.io/prometheus-community/charts/prometheus-blackbox-exporter
-    tag: 11.18.0
+    tag: 11.20.2
 
 onepassword_operator:
   image:
     repository: registry-1.docker.io/1password/onepassword-operator
-    tag: 1.12.0
+    tag: 1.12.1
 
 kafka_exporter_chart:
   image:
     repository: ghcr.io/prometheus-community/charts/prometheus-kafka-exporter
-    tag: 4.0.0
+    tag: 4.1.0
 
 sshd:
   image:
@@ -79,12 +79,12 @@ kyverno_chart:
   image:
     repository: ghcr.io/kyverno/charts/kyverno
     # 3.9.0 seems to behave differently (i.e., applying mutating policy to all namespaces, see https://github.com/kyverno/kyverno/issues/17411), so sticking with 3.8.2
-    tag: 3.8.2
+    tag: 3.9.2
 
 uptime_kuma:
   image:
     repository: dhi.io/uptime-kuma
-    tag: 2.5.5
+    tag: 2.5.7
 
 valkey:
   image:
@@ -109,7 +109,7 @@ kafka:
 ionos_exporter:
   image:
     repository: "ghcr.io/dbildungsplattform/ionos-exporter"
-    tag: 0.6.0
+    tag: 0.7.0
 
 trivy_operator_chart:
   image:
@@ -119,4 +119,4 @@ trivy_operator_chart:
 telegraf:
   image:
     repository: "docker.io/telegraf"
-    tag: 1.37.1
+    tag: 1.40.1
